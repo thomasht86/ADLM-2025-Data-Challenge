@@ -98,24 +98,61 @@ body {
    Smooth Transitions
    ========================= */
 
-#messages-container,
-#chat-input-container,
-#welcome-header,
-#example-questions,
-#keyboard-hint {
-    transition: all 0.5s ease-in-out;
-}
-
-/* Center chat input initially - position higher */
+/* Single, seamless transition for all elements */
 #messages-container {
+    transition: all 0.100s cubic-bezier(0.4, 0, 0.2, 1);
     justify-content: center;
     padding-top: 15vh;
 }
 
-/* Hide border on initial state */
-.chat-input-initial {
+#chat-input-container {
+    transition: all 0.100s cubic-bezier(0.4, 0, 0.2, 1);
     border-top: none !important;
     transform: translateY(-15vh);
+}
+
+#chat-input-wrapper {
+    transition: padding 0.100s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#welcome-header,
+#example-questions,
+#keyboard-hint {
+    transition: opacity 0.050s ease-in-out, transform 0.050s ease-in-out;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Active chat state - all elements transition together */
+body.chat-active #messages-container {
+    justify-content: flex-start;
+    padding-top: 0;
+}
+
+body.chat-active #chat-input-container {
+    border-top: 1px solid rgb(229 231 235) !important;
+    transform: translateY(0);
+}
+
+body.chat-active.dark #chat-input-container {
+    border-top-color: rgb(55 65 81) !important;
+}
+
+body.chat-active #chat-input-wrapper {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+body.chat-active #welcome-header,
+body.chat-active #example-questions,
+body.chat-active #keyboard-hint {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+}
+
+#toggle-sources {
+    transition: opacity 0.3s ease-in-out 0.2s;
 }
 
 /* Make textarea larger and more prominent when centered */

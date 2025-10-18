@@ -68,7 +68,7 @@
         <div class="flex-1 flex flex-col">
 
             <!-- Messages Container (Scrollable) -->
-            <div id="messages-container" class="flex-1 overflow-y-auto flex flex-col justify-center transition-all duration-500">
+            <div id="messages-container" class="flex-1 overflow-y-auto flex flex-col">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full">
 
                     <!-- Messages will be inserted here -->
@@ -80,10 +80,10 @@
             </div>
 
             <!-- Chat Input (Centered initially, moves to bottom after first message) -->
-            <div id="chat-input-container" class="flex-shrink-0 transition-all duration-500 chat-input-initial">
-                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div id="chat-input-container" class="flex-shrink-0">
+                <div id="chat-input-wrapper" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
                     <!-- Welcome Header -->
-                    <div id="welcome-header" class="text-center mb-8 transition-opacity duration-500">
+                    <div id="welcome-header" class="text-center mb-8">
                         <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full mb-4">
                             <svg class="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>

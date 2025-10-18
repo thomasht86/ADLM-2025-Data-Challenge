@@ -97,9 +97,13 @@ class ChatUI {
         this.chatInput.value = '';
         this.chatInput.style.height = 'auto';
 
-        // Handle first message transition
+        // Handle first message - show sources panel/button immediately, then transition
         if (!this.hasStartedChat) {
-            this.transitionToChat();
+            this.showSourcesUI();
+            // Small delay before starting transition for visual flow
+            setTimeout(() => {
+                this.transitionToChat();
+            }, 100);
             this.hasStartedChat = true;
         }
 
@@ -322,61 +326,36 @@ class ChatUI {
         });
     }
 
-    transitionToChat() {
-        // Fade out and hide welcome elements
-        if (this.welcomeHeader) {
-            this.welcomeHeader.style.opacity = '0';
-            setTimeout(() => {
-                this.welcomeHeader.style.display = 'none';
-            }, 300);
-        }
-
-        if (this.exampleQuestions) {
-            this.exampleQuestions.style.opacity = '0';
-            setTimeout(() => {
-                this.exampleQuestions.style.display = 'none';
-            }, 300);
-        }
-
-        if (this.keyboardHint) {
-            this.keyboardHint.style.opacity = '0';
-            setTimeout(() => {
-                this.keyboardHint.style.display = 'none';
-            }, 300);
-        }
-
-        // Move messages container to top
-        if (this.messagesContainer) {
-            this.messagesContainer.style.justifyContent = 'flex-start';
-        }
-
-        // Move chat input to bottom with border
-        if (this.chatInputContainer) {
-            setTimeout(() => {
-                this.chatInputContainer.classList.remove('chat-input-initial');
-                this.chatInputContainer.classList.add('border-t', 'border-gray-200', 'dark:border-gray-700');
-                this.chatInputContainer.querySelector('.max-w-4xl').classList.remove('py-6');
-                this.chatInputContainer.querySelector('.max-w-4xl').classList.add('py-4');
-            }, 300);
-        }
-
-        // Show and animate sources button
-        setTimeout(() => {
+    showSourcesUI() {
+        // Show sources button immediately
+        if (this.toggleSourcesBtn) {
             this.toggleSourcesBtn.classList.remove('hidden', 'opacity-0');
             this.toggleSourcesBtn.classList.add('md:flex', 'opacity-100');
-        }, 500);
+        }
+
+        // Show sources panel on desktop
+        if (this.sourcesPanel) {
+            this.sourcesPanel.classList.remove('hidden');
+            this.sourcesPanel.classList.add('flex');
+        }
+    }
+
+    transitionToChat() {
+        // Trigger single, unified transition by adding chat-active class to body
+        document.body.classList.add('chat-active');
+
+        // Hide welcome elements after transition completes (cleanup)
+        setTimeout(() => {
+            if (this.welcomeHeader) this.welcomeHeader.style.display = 'none';
+            if (this.exampleQuestions) this.exampleQuestions.style.display = 'none';
+            if (this.keyboardHint) this.keyboardHint.style.display = 'none';
+        }, 100);
     }
 
     updateSources(results) {
         this.sources = results;
         this.noSources.style.display = 'none';
         this.sourcesCount.textContent = results.length;
-
-        // Show sources panel on desktop with smooth transition
-        setTimeout(() => {
-            this.sourcesPanel.classList.remove('hidden');
-            this.sourcesPanel.classList.add('flex');
-        }, 300);
 
         // Render source cards
         this.sourcesList.innerHTML = results.map((source, index) =>
