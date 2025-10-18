@@ -1,0 +1,293 @@
+{
+    "root": {
+        "id": "toplevel",
+        "relevance": 1.0,
+        "fields": {
+            "totalCount": 100
+        },
+        "coverage": {
+            "coverage": 100,
+            "documents": 100,
+            "full": true,
+            "nodes": 1,
+            "results": 1,
+            "resultsFull": 1
+        },
+        "children": [
+            {
+                "id": "id:doc:doc::68",
+                "relevance": 0.9993392117321491,
+                "source": "content",
+                "fields": {
+                    "matchfeatures": {
+                        "bm25(chunks)": 1.974732026750656,
+                        "bm25(title)": 0.0,
+                        "closeness(chunk_embeddings)": 0.003787878787878788,
+                        "closeness(title_embedding)": 0.0027247956403269754,
+                        "max_chunk_sim_scores": 0.0037878789007663727,
+                        "max_chunk_text_scores": 1.7250412702560425
+                    },
+                    "sddocname": "doc",
+                    "documentid": "id:doc:doc::68",
+                    "chunks": [
+                        "# Parameter-Efficient Fine-Tuning (PEFT) Techniques - Overview\n\n**Goal:** Fine-tune large pre-trained models with significantly fewer trainable parameters, reducing computational cost and memory footprint.\n\n**Key Techniques I've Researched/Used:**\n\n1.  **LoRA (Low-Rank Adaptation):**\n    * Freezes pre-trained model weights.\n    * Injects trainable rank decomposition matrices into Transformer layers.\n    * Significantly reduces trainable parameters.\n    * My default starting point for LLM fine-tuning (see `llm_finetuning_pitfalls_best_practices.md`).\n\n2.  **QLoRA:**\n    * Builds on LoRA.\n    * Quantizes pre-trained model to 4-bit.\n    * Uses LoRA for fine-tuning the quantized model.\n    * Further reduces memory usage, enabling fine-tuning of larger models on ",
+                        "consumer GPUs.\n\n3.  **Adapter Modules:**\n    * Inserts small, trainable neural network modules (adapters) between existing layers of the pre-trained model.\n    * Only adapters are trained.\n\n4.  **Prompt Tuning / Prefix Tuning:**\n    * Keeps model parameters frozen.\n    * Learns a small set of continuous prompt embeddings (virtual tokens) that are prepended to the input sequence.\n\n**Benefits for SynapseFlow (Internal Model Dev):**\n- Faster iteration on fine-tuning tasks.\n- Ability to experiment with larger models on available hardware.\n- Easier to manage multiple fine-tuned model versions (smaller delta to store).\n\n## <MORE_TEXT:HERE> (Links to papers, Hugging Face PEFT library notes)"
+                    ],
+                    "id": "68",
+                    "title": "peft_techniques_overview.md",
+                    "created_timestamp": 1714500000,
+                    "modified_timestamp": 1714500000,
+                    "last_opened_timestamp": 1714500000,
+                    "open_count": 7,
+                    "favorite": true
+                }
+            },
+            {
+                "id": "id:doc:doc::77",
+                "relevance": 0.9980434780009091,
+                "source": "content",
+                "fields": {
+                    "matchfeatures": {
+                        "bm25(chunks)": 2.427754541748658,
+                        "bm25(title)": 0.0,
+                        "closeness(chunk_embeddings)": 0.003278688524590164,
+                        "closeness(title_embedding)": 0.0030959752321981426,
+                        "max_chunk_sim_scores": 0.0032786885276436806,
+                        "max_chunk_text_scores": 2.065889358520508
+                    },
+                    "sddocname": "doc",
+                    "documentid": "id:doc:doc::77",
+                    "chunks": [
+                        "# Old Presentation: 'Introduction to Deep Learning for Computer Vision' (Guest Lecture - Uni Club)\n\n**Date:** May 2023\n\n**Outline:**\n1. What is Computer Vision?\n2. Traditional CV Techniques (Briefly: SIFT, HOG)\n3. Rise of Deep Learning: Why it's effective.\n4. Convolutional Neural Networks (CNNs):\n   - Convolutional Layers\n   - Pooling Layers\n   - Fully Connected Layers\n5. Popular CNN Architectures (Briefly: LeNet, AlexNet, VGG, ResNet).\n6. Applications: Image Classification, Object Detection, Segmentation.\n7. Demo: Training a simple CNN on MNIST using Keras/TensorFlow.\n8. Resources for Learning More.\n\n**Notes:** Aimed at undergrads with some programming but little ML experience. Kept math to a minimum. Focused on intuition and applications.\n## <MORE_TEXT:HERE> (Speaker notes for each slide, links to demo code)"
+                    ],
+                    "id": "77",
+                    "title": "presentation_intro_cv_deep_learning.md",
+                    "created_timestamp": 1686000000,
+                    "modified_timestamp": 1686000000,
+                    "last_opened_timestamp": 1686000000,
+                    "open_count": 2,
+                    "favorite": false
+                }
+            },
+            {
+                "id": "id:doc:doc::32",
+                "relevance": 0.9900740827433765,
+                "source": "content",
+                "fields": {
+                    "matchfeatures": {
+                        "bm25(chunks)": 0.22835865987607312,
+                        "bm25(title)": 0.0,
+                        "closeness(chunk_embeddings)": 0.0037593984962406013,
+                        "closeness(title_embedding)": 0.002898550724637681,
+                        "max_chunk_sim_scores": 0.003759398590773344,
+                        "max_chunk_text_scores": 0.21704164147377014
+                    },
+                    "sddocname": "doc",
+                    "documentid": "id:doc:doc::32",
+                    "chunks": [
+                        "# Ideas for Personal Side Project: 'LiftSmart' - AI Fitness Planner\n\nConcept: An app that uses AI to generate personalized strength training programs based on user goals, experience, available equipment, and feedback.\n\nPotential Features:\n- RPE-based auto-regulation.\n- Exercise selection based on muscle group targets and user preferences.\n- Progression models (linear, undulating, block periodization).\n- Form analysis using phone camera (very ambitious - CV component).\n- Integration with wearable data for recovery insights.\n\nTech Stack Ideas:\n- Python backend (FastAPI).\n- React Native for mobile app.\n- TensorFlow/PyTorch for ML models.\n- PostgreSQL for user data.\n\nMonetization: Freemium model, premium features for advanced analytics or coaching.\n\nChallenge: Startup (SynapseFlow) is #1 priority. This is just a 'someday/maybe' idea dump.\n## <MORE_TEXT:HERE>"
+                    ],
+                    "id": "32",
+                    "title": "side_project_idea_liftsmart.md",
+                    "created_timestamp": 1685000000,
+                    "modified_timestamp": 1685000000,
+                    "last_opened_timestamp": 1690000000,
+                    "open_count": 5,
+                    "favorite": false
+                }
+            },
+            {
+                "id": "id:doc:doc::65",
+                "relevance": 0.9898955402895808,
+                "source": "content",
+                "fields": {
+                    "matchfeatures": {
+                        "bm25(chunks)": 1.122868622288892,
+                        "bm25(title)": 0.0,
+                        "closeness(chunk_embeddings)": 0.002881844380403458,
+                        "closeness(title_embedding)": 0.002932551319648094,
+                        "max_chunk_sim_scores": 0.0028818442951887846,
+                        "max_chunk_text_scores": 0.9863465428352356
+                    },
+                    "sddocname": "doc",
+                    "documentid": "id:doc:doc::65",
+                    "chunks": [
+                        "# Powerlifting Meet Prep - Mock Meet Log (Nov 2024 - ~2 weeks out from hypothetical meet)\n\n**Goal:** Simulate meet conditions, test openers, get used to commands.\n\n**Squat:**\n- Opener: 385 lbs (Good lift, smooth)\n- Second: 405 lbs (Good lift, slight grind)\n- Third: 415 lbs (Missed - depth questionable, lost tightness)\n\n**Bench Press:**\n- Opener: 295 lbs (Good lift)\n- Second: 305 lbs (Good lift)\n- Third: 315 lbs (Missed - bar stalled mid-way)\n\n**Deadlift:**\n- Opener: 455 lbs (Good lift)\n- Second: 475 lbs (Good lift, bit slow off floor)\n- Third: 490 lbs (Good lift, tough lockout)\n\n**Notes:**\n- Need to be more conservative with squat third attempt for the actual meet.\n- Bench sticking point is still an issue under fatigue.\n- Deadlift felt strong overall.\n- Focus on recovery and technique refinement for the next 2 weeks.\n## <MORE_TEXT:HERE> (Bodyweight, warm-up details, notes on commands)"
+                    ],
+                    "id": "65",
+                    "title": "mock_powerlifting_meet_log_nov2024.md",
+                    "created_timestamp": 1699500000,
+                    "modified_timestamp": 1699500000,
+                    "last_opened_timestamp": 1699500000,
+                    "open_count": 3,
+                    "favorite": false
+                }
+            },
+            {
+                "id": "id:doc:doc::78",
+                "relevance": 0.97939712414518,
+                "source": "content",
+                "fields": {
+                    "matchfeatures": {
+                        "bm25(chunks)": 3.003894685049409,
+                        "bm25(title)": 0.0,
+                        "closeness(chunk_embeddings)": 0.003937007874015748,
+                        "closeness(title_embedding)": 0.0031746031746031746,
+                        "max_chunk_sim_scores": 0.003937007859349251,
+                        "max_chunk_text_scores": 2.577453136444092
+                    },
+                    "sddocname": "doc",
+                    "documentid": "id:doc:doc::78",
+                    "chunks": [
+                        "# Feature Brainstorm: SynapseFlow Model Monitoring Dashboard v1\n\n**Goal:** Provide users with basic insights into their deployed model's performance and health.\n\n**Key Metrics to Display:**\n- **Inference Latency:** Avg, p95, p99 (Histogram).\n- **Request Rate / Throughput:** Requests per second/minute.\n- **Error Rate:** Percentage of 5xx errors.\n- **CPU/Memory Usage:** Per deployment/instance.\n- **GPU Usage / Temp (if applicable).**\n\n**Visualizations:**\n- Time series graphs for all key metrics.\n- Ability to select time range (last hour, day, week).\n- Filter by deployment ID.\n\n**Data Sources:**\n- Prometheus metrics from model server (see `code_review_pr123_metrics.md`).\n- Kubernetes metrics (via Kube State Metrics or cAdvisor).\n\n**Future Ideas (v2+):**\n- Data drift detection.\n- Concept drift detection.\n- Alerting on anomalies or threshold breaches.\n- Custom metric ingestion.\n\n## <MORE_TEXT:HERE> (UI mock-up sketches, specific Prometheus queries)"
+                    ],
+                    "id": "78",
+                    "title": "feature_brainstorm_monitoring_dashboard.md",
+                    "created_timestamp": 1717750000,
+                    "modified_timestamp": 1717750000,
+                    "last_opened_timestamp": 1717750000,
+                    "open_count": 3,
+                    "favorite": true
+                }
+            },
+            {
+                "id": "id:doc:doc::30",
+                "relevance": 0.9599265386350453,
+                "source": "content",
+                "fields": {
+                    "matchfeatures": {
+                        "bm25(chunks)": 3.505376416648625,
+                        "bm25(title)": 0.0,
+                        "closeness(chunk_embeddings)": 0.004672897196261682,
+                        "closeness(title_embedding)": 0.004132231404958678,
+                        "max_chunk_sim_scores": 0.004672897048294544,
+                        "max_chunk_text_scores": 3.0038092136383057
+                    },
+                    "sddocname": "doc",
+                    "documentid": "id:doc:doc::30",
+                    "chunks": [
+                        "# SynapseFlow Security Audit Checklist - Initial Draft (v0.1)\n\n## Authentication & Authorization:\n- [ ] API Key Management: Secure generation, storage, rotation.\n- [ ] Role-Based Access Control (RBAC) for platform features.\n- [ ] Input validation for all API endpoints.\n\n## Data Security:\n- [ ] Encryption at rest for model artifacts and user data (e.g., S3 SSE).\n- [ ] Encryption in transit (TLS/SSL for all communications).\n- [ ] Data isolation between tenants (if multi-tenant architecture).\n\n## Infrastructure Security:\n- [ ] Regular patching of underlying OS and K8s components.\n- [ ] Network security (firewalls, VPCs, security groups).\n- [ ] Container image scanning for vulnerabilities.\n\n## Logging & Monitoring:\n- [ ] Comprehensive audit logs for platform actions.\n- [ ] Intrusion detection/prevention systems (IDS/IPS) consideration.\n\n## <MORE_TEXT:HERE> (Specific tools to consider, compliance notes for future)"
+                    ],
+                    "id": "30",
+                    "title": "synapseflow_security_audit_checklist.md",
+                    "created_timestamp": 1716500000,
+                    "modified_timestamp": 1716500000,
+                    "last_opened_timestamp": 1716500000,
+                    "open_count": 6,
+                    "favorite": true
+                }
+            },
+            {
+                "id": "id:doc:doc::94",
+                "relevance": 0.9506884152069688,
+                "source": "content",
+                "fields": {
+                    "matchfeatures": {
+                        "bm25(chunks)": 1.9301197900725873,
+                        "bm25(title)": 0.0,
+                        "closeness(chunk_embeddings)": 0.0031746031746031746,
+                        "closeness(title_embedding)": 0.002824858757062147,
+                        "max_chunk_sim_scores": 0.0031746032182127237,
+                        "max_chunk_text_scores": 2.0673673152923584
+                    },
+                    "sddocname": "doc",
+                    "documentid": "id:doc:doc::94",
+                    "chunks": [
+                        "# Old Resume - Alex Chen (Circa Early 2023 - Pre-SynapseFlow)\n\n**Alex Chen**\n[Email] | [Phone] | LinkedIn URL | GitHub URL\n\n**Education**\n- M.S. in Computer Science, Specialization in AI/ML - [University Name] (Year)\n- B.S. in Computer Science - [University Name] (Year)\n\n**Experience**\n- **AI Research Intern** - [Big Tech Company / Research Lab] (Summer Year)\n  - Developed [Project related to NLP/CV using Transformers/CNNs].\n  - Achieved [Quantifiable result, e.g., X% improvement in metric].\n- **Software Engineering Intern** - [Another Tech Company]",
+                        " (Summer Year-1)\n  - Contributed to [Project using Python/Java/C++].\n\n**Projects**\n- **Project VisionServe:** Real-time object detection service (Python, TensorFlow, OpenCV). (See `old_project_visionserve_readme.md`)\n- **AI Music Generation:** Capstone project using LSTMs. (See `uni_project_music_generation.md`)\n\n**Skills**\n- Programming: Python (Expert), C++, Java, Go\n- AI/ML: TensorFlow, PyTorch, scikit-learn, Deep Learning, NLP, CV\n- Tools: Git, Docker, AWS, SQL\n\n## <MORE_TEXT:HERE> (Awards, publications if any, course list)"
+                    ],
+                    "id": "94",
+                    "title": "resume_alex_chen_early2023.md",
+                    "created_timestamp": 1680000000,
+                    "modified_timestamp": 1680000000,
+                    "last_opened_timestamp": 1680000000,
+                    "open_count": 3,
+                    "favorite": false
+                }
+            },
+            {
+                "id": "id:doc:doc::48",
+                "relevance": 0.9403215874917805,
+                "source": "content",
+                "fields": {
+                    "matchfeatures": {
+                        "bm25(chunks)": 5.350852355874684,
+                        "bm25(title)": 0.0,
+                        "closeness(chunk_embeddings)": 0.004081632653061225,
+                        "closeness(title_embedding)": 0.0030211480362537764,
+                        "max_chunk_sim_scores": 0.004081632476300001,
+                        "max_chunk_text_scores": 5.628736972808838
+                    },
+                    "sddocname": "doc",
+                    "documentid": "id:doc:doc::48",
+                    "chunks": [
+                        "# PostgreSQL Optimization Notes for SynapseFlow Metadata DB\n\n**Current Schema:** (See `synapseflow_architecture_v0.2.md` for high level)\n- `deployments` table (deployment_id, model_name, version, status, created_at, etc.)\n- `model_artifacts` table (artifact_id, s3_url, checksum, etc.)\n- `users` table\n\n**Potential Bottlenecks as we scale:**\n- Queries for active deployments by user.\n- Searching for deployments by model_name or tags (future feature).\n- Write load on `deployment_logs` table (future feature).\n\n**Optimization Strategies to Consider:**\n1.  **Indexing:**\n    - Ensure appropriate indexes on foreign keys ",
+                        "(`user_id` in `deployments`).\n    - Index frequently queried columns (`status`, `created_at` in `deployments`, `model_name`).\n    - Consider composite indexes for multi-column queries.\n    - Use `EXPLAIN ANALYZE` to identify slow queries and missing indexes.\n2.  **Connection Pooling:** Use PgBouncer or similar.\n3.  **Vacuuming & Analyzing:** Ensure auto-vacuum is tuned correctly.\n4.  **Query Optimization:** Rewrite inefficient queries, avoid SELECT *.\n5.  **Read Replicas (Future):** For read-heavy dashboard queries.\n\n## <MORE_TEXT:HERE> (Specific EXPLAIN plans, notes on table partitioning for logs)"
+                    ],
+                    "id": "48",
+                    "title": "postgresql_optimization_notes.md",
+                    "created_timestamp": 1717372800,
+                    "modified_timestamp": 1717372800,
+                    "last_opened_timestamp": 1717372800,
+                    "open_count": 2,
+                    "favorite": false
+                }
+            },
+            {
+                "id": "id:doc:doc::86",
+                "relevance": 0.9335079817101359,
+                "source": "content",
+                "fields": {
+                    "matchfeatures": {
+                        "bm25(chunks)": 1.6090440877003294,
+                        "bm25(title)": 0.0,
+                        "closeness(chunk_embeddings)": 0.0037593984962406013,
+                        "closeness(title_embedding)": 0.0029411764705882353,
+                        "max_chunk_sim_scores": 0.003759398590773344,
+                        "max_chunk_text_scores": 1.805720329284668
+                    },
+                    "sddocname": "doc",
+                    "documentid": "id:doc:doc::86",
+                    "chunks": [
+                        "# Blog Post Draft: 'Top 5 Pitfalls in LLM Fine-Tuning (And How to Avoid Them)'\n\n**Based on:** `llm_finetuning_pitfalls_best_practices.md` and `peft_techniques_overview.md`\n\n**Target Audience:** Developers, ML Engineers starting with LLM fine-tuning.\n\n**Outline:**\n1.  **Intro:** Excitement of LLM fine-tuning, but common challenges.\n2.  **Pitfall 1: Catastrophic Forgetting**\n    * Explanation, why it happens.\n    * Solutions: PEFT (LoRA, QLoRA), diverse data, careful LR.\n3.  **Pitfall 2: Poor Data Quality/Quantity**\n    * GIGO principle.\n    * Importance of cleaning, labeling, sufficient examples.\n4.  **Pitfall 3: Overfitting to Small Datasets*",
+                        "*\n    * Signs of overfitting.\n    * Solutions: Regularization, validation, early stopping.\n5.  **Pitfall 4: Underestimating Computational Costs**\n    * VRAM, time.\n    * Solutions: PEFT, gradient accumulation, choosing right base model size.\n6.  **Pitfall 5: Ineffective Evaluation**\n    * Limitations of automated metrics.\n    * Need for human eval, task-specific metrics.\n7.  **Conclusion:** Fine-tuning is powerful but requires careful approach. SynapseFlow aims to simplify parts of this (subtle tie-in if appropriate for where it's published).\n\n## <MORE_TEXT:HERE> (Draft paragraphs for each section, code examples for LoRA setup)"
+                    ],
+                    "id": "86",
+                    "title": "blog_draft_llm_finetuning_pitfalls.md",
+                    "created_timestamp": 1717950000,
+                    "modified_timestamp": 1717950000,
+                    "last_opened_timestamp": 1717950000,
+                    "open_count": 1,
+                    "favorite": false
+                }
+            },
+            {
+                "id": "id:doc:doc::67",
+                "relevance": 0.9331021173857152,
+                "source": "content",
+                "fields": {
+                    "matchfeatures": {
+                        "bm25(chunks)": 0.0,
+                        "bm25(title)": 0.0,
+                        "closeness(chunk_embeddings)": 0.003246753246753247,
+                        "closeness(title_embedding)": 0.003115264797507788,
+                        "max_chunk_sim_scores": 0.003246753243729472,
+                        "max_chunk_text_scores": 0.0
+                    },
+                    "sddocname": "doc",
+                    "documentid": "id:doc:doc::67",
+                    "chunks": [
+                        "# Travel Itinerary: AI Conference - Austin, TX (June 2023 - Old)\n\n**Conference:** [Fictional AI Conference Name]\n**Dates:** June 15-17, 2023\n\n**Flights:**\n- Depart SFO: June 14, [Airline], Flight [Number], [Time]\n- Arrive AUS: June 14, [Time]\n- Depart AUS: June 18, [Airline], Flight [Number], [Time]\n- Arrive SFO: June 18, [Time]\n\n**Hotel:**\n- [Hotel Name], Austin Downtown\n- Check-in: June 14, Check-out: June 18\n\n**Talks/Sessions I Want to Attend:**\n- Keynote by [Famous AI Researcher]\n- Tutorial on [New ML Technique]\n- Session on MLOps Best Practices\n\n**Networking Goals:**\n- Meet researchers from [University X].\n- Connect with engineers from [Company Y].\n\n## <MORE_TEXT:HERE> (Confirmation numbers, restaurant ideas, packing list)"
+                    ],
+                    "id": "67",
+                    "title": "travel_ai_conference_austin_jun2023.md",
+                    "created_timestamp": 1687000000,
+                    "modified_timestamp": 1687000000,
+                    "last_opened_timestamp": 1687000000,
+                    "open_count": 1,
+                    "favorite": false
+                }
+            }
+        ]
+    }
+}
