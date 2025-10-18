@@ -353,6 +353,7 @@ class ChatUI {
         // Move chat input to bottom with border
         if (this.chatInputContainer) {
             setTimeout(() => {
+                this.chatInputContainer.classList.remove('chat-input-initial');
                 this.chatInputContainer.classList.add('border-t', 'border-gray-200', 'dark:border-gray-700');
                 this.chatInputContainer.querySelector('.max-w-4xl').classList.remove('py-6');
                 this.chatInputContainer.querySelector('.max-w-4xl').classList.add('py-4');
@@ -487,6 +488,7 @@ class ChatUI {
 
             // Reset chat input container
             if (this.chatInputContainer) {
+                this.chatInputContainer.classList.add('chat-input-initial');
                 this.chatInputContainer.classList.remove('border-t', 'border-gray-200', 'dark:border-gray-700');
                 const container = this.chatInputContainer.querySelector('.max-w-4xl');
                 if (container) {

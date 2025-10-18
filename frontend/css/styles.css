@@ -106,9 +106,16 @@ body {
     transition: all 0.5s ease-in-out;
 }
 
-/* Center chat input initially */
+/* Center chat input initially - position higher */
 #messages-container {
     justify-content: center;
+    padding-top: 15vh;
+}
+
+/* Hide border on initial state */
+.chat-input-initial {
+    border-top: none !important;
+    transform: translateY(-15vh);
 }
 
 /* Make textarea larger and more prominent when centered */
