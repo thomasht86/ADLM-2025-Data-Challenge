@@ -1,0 +1,652 @@
+/*
+ * Chat Interface Styles for LabDocs Unlocked
+ * Color Palette: Professional, easy on the eyes
+ *
+ * Light Mode:
+ *   - Background: #FAFBFC (soft off-white)
+ *   - Surface: #FFFFFF (pure white cards)
+ *   - Primary: #4F46E5 (indigo)
+ *   - Text: #1F2937 (soft black)
+ *   - Border: #E5E7EB (subtle gray)
+ *
+ * Dark Mode:
+ *   - Background: #0F1419 (soft black)
+ *   - Surface: #1A1F2E (dark blue-gray)
+ *   - Primary: #818CF8 (lighter indigo)
+ *   - Text: #E5E7EB (soft white)
+ */
+
+/* =========================
+   CSS Custom Properties (Variables)
+   ========================= */
+
+:root {
+    /* Light mode colors (default) */
+    --color-bg-primary: #FAFBFC;
+    --color-bg-surface: #FFFFFF;
+    --color-bg-hover: #F9FAFB;
+    --color-bg-active: #F3F4F6;
+    --color-bg-muted: #E5E7EB;
+    
+    --color-text-primary: #1F2937;
+    --color-text-secondary: #4B5563;
+    --color-text-muted: #6B7280;
+    --color-text-inverse: #FFFFFF;
+    
+    --color-border: #E5E7EB;
+    --color-border-hover: #D1D5DB;
+    --color-border-focus: #4F46E5;
+    
+    --color-accent-primary: #4F46E5;
+    --color-accent-secondary: #6366F1;
+    --color-accent-light: #EEF2FF;
+    --color-accent-lighter: #E0E7FF;
+    
+    --color-highlight-bg: #FEF3C7;
+    --color-highlight-text: #92400E;
+    
+    --color-badge-sop-bg: #DBEAFE;
+    --color-badge-sop-text: #1E40AF;
+    --color-badge-510k-bg: #FCE7F3;
+    --color-badge-510k-text: #BE185D;
+    --color-badge-other-bg: #F3F4F6;
+    --color-badge-other-text: #4B5563;
+}
+
+.dark {
+    /* Dark mode colors */
+    --color-bg-primary: #0F1419;
+    --color-bg-surface: #1A1F2E;
+    --color-bg-hover: #252D3F;
+    --color-bg-active: #2D3748;
+    --color-bg-muted: #374151;
+    
+    --color-text-primary: #E5E7EB;
+    --color-text-secondary: #D1D5DB;
+    --color-text-muted: #9CA3AF;
+    --color-text-inverse: #FFFFFF;
+    
+    --color-border: #2D3748;
+    --color-border-hover: #374151;
+    --color-border-focus: #6366F1;
+    
+    --color-accent-primary: #818CF8;
+    --color-accent-secondary: #6366F1;
+    --color-accent-light: #312E81;
+    --color-accent-lighter: #1E1B4B;
+    
+    --color-highlight-bg: #78350F;
+    --color-highlight-text: #FEF3C7;
+    
+    --color-badge-sop-bg: #1E3A8A;
+    --color-badge-sop-text: #BFDBFE;
+    --color-badge-510k-bg: #831843;
+    --color-badge-510k-text: #FBCFE8;
+    --color-badge-other-bg: #374151;
+    --color-badge-other-text: #D1D5DB;
+}
+
+/* =========================
+   Global Styles
+   ========================= */
+
+body {
+    background-color: var(--color-bg-primary);
+}
+
+/* =========================
+   Smooth Transitions
+   ========================= */
+
+/* Single, seamless transition for all elements */
+#messages-container {
+    transition: all 0.100s cubic-bezier(0.4, 0, 0.2, 1);
+    justify-content: center;
+    padding-top: 15vh;
+}
+
+#chat-input-container {
+    transition: all 0.100s cubic-bezier(0.4, 0, 0.2, 1);
+    border-top: none !important;
+    transform: translateY(-15vh);
+}
+
+#chat-input-wrapper {
+    transition: padding 0.100s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#welcome-header,
+#example-questions,
+#keyboard-hint {
+    transition: opacity 0.050s ease-in-out, transform 0.050s ease-in-out;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Active chat state - all elements transition together */
+body.chat-active #messages-container {
+    justify-content: flex-start;
+    padding-top: 0;
+}
+
+body.chat-active #chat-input-container {
+    border-top: 1px solid rgb(229 231 235) !important;
+    transform: translateY(0);
+}
+
+body.chat-active.dark #chat-input-container {
+    border-top-color: rgb(55 65 81) !important;
+}
+
+body.chat-active #chat-input-wrapper {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+body.chat-active #welcome-header,
+body.chat-active #example-questions,
+body.chat-active #keyboard-hint {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+}
+
+#toggle-sources {
+    transition: opacity 0.3s ease-in-out 0.2s;
+}
+
+/* Make textarea larger and more prominent when centered */
+#chat-input {
+    transition: all 0.3s ease;
+}
+
+#chat-input:focus {
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* =========================
+   Header
+   ========================= */
+
+header {
+    background-color: var(--color-bg-surface);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.02);
+}
+
+/* =========================
+   Message Bubbles
+   ========================= */
+
+.message-user {
+    margin-bottom: 1.5rem;
+}
+
+.message-user-content {
+    display: inline-block;
+    max-width: 80%;
+    padding: 0.875rem 1.25rem;
+    background: linear-gradient(135deg, var(--color-accent-primary) 0%, var(--color-accent-secondary) 100%);
+    color: var(--color-text-inverse);
+    border-radius: 1.25rem;
+    border-bottom-right-radius: 0.375rem;
+    box-shadow: 0 2px 8px rgba(79, 70, 229, 0.15);
+    line-height: 1.6;
+    font-size: 0.9375rem;
+}
+
+.message-ai {
+    margin-bottom: 2rem;
+}
+
+.message-ai-avatar {
+    width: 2.25rem;
+    height: 2.25rem;
+    background: linear-gradient(135deg, var(--color-accent-primary) 0%, #7C3AED 100%);
+    border-radius: 0.625rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(79, 70, 229, 0.2);
+}
+
+.message-ai-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.ai-response-prose {
+    line-height: 1.75;
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+}
+
+/* =========================
+   Typing Indicator
+   ========================= */
+
+.typing-indicator {
+    display: inline-flex;
+    gap: 0.375rem;
+    padding: 0.875rem 1.25rem;
+    background-color: var(--color-bg-active);
+    border-radius: 1.25rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.typing-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--color-text-muted);
+    border-radius: 50%;
+    animation: typing 1.4s infinite ease-in-out;
+}
+
+.typing-dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing {
+    0%, 60%, 100% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+    30% {
+        transform: translateY(-0.5rem);
+        opacity: 1;
+    }
+}
+
+/* =========================
+   Citations & Highlights
+   ========================= */
+
+.highlight {
+    background-color: var(--color-highlight-bg);
+    color: var(--color-highlight-text);
+    font-weight: 600;
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+}
+
+.citation {
+    display: inline-block;
+    color: var(--color-accent-primary);
+    background-color: var(--color-accent-light);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0.125rem 0.5rem;
+    border-radius: 0.375rem;
+    margin: 0 0.125rem;
+    transition: all 0.2s ease;
+}
+
+.citation:hover {
+    background-color: var(--color-accent-lighter);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(79, 70, 229, 0.2);
+}
+
+/* =========================
+   Source Cards
+   ========================= */
+
+#sources-panel {
+    background-color: var(--color-bg-primary);
+    border-left: 1px solid var(--color-border);
+}
+
+/* Panel header should blend with background */
+#sources-panel-header {
+    background-color: transparent;
+    border-bottom: 1px solid var(--color-border);
+}
+
+#sources-panel-header h3 {
+    color: var(--color-text-primary);
+}
+
+.source-card {
+    margin-bottom: 0.875rem;
+    padding: 1rem;
+    background-color: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.source-card:hover {
+    border-color: var(--color-border-focus);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.1);
+    transform: translateY(-2px);
+}
+
+.source-card.highlighted {
+    border-color: var(--color-border-focus);
+    background-color: var(--color-accent-light);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   Badges
+   ========================= */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.625rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    letter-spacing: 0.025em;
+}
+
+.badge-sop {
+    background-color: var(--color-badge-sop-bg);
+    color: var(--color-badge-sop-text);
+}
+
+.badge-510k {
+    background-color: var(--color-badge-510k-bg);
+    color: var(--color-badge-510k-text);
+}
+
+.badge-other {
+    background-color: var(--color-badge-other-bg);
+    color: var(--color-badge-other-text);
+}
+
+/* =========================
+   Chat Input
+   ========================= */
+
+#chat-input-container {
+    background-color: var(--color-bg-primary);
+    border-top: 1px solid var(--color-border);
+}
+
+#chat-input {
+    overflow-y: hidden;
+    background-color: var(--color-bg-surface);
+    border: 1.5px solid var(--color-border);
+    color: var(--color-text-primary);
+    font-size: 0.9375rem;
+    transition: all 0.2s ease;
+}
+
+#chat-input:focus {
+    outline: none;
+    border-color: var(--color-border-focus);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+#send-button {
+    background: linear-gradient(135deg, var(--color-accent-primary) 0%, var(--color-accent-secondary) 100%);
+    box-shadow: 0 2px 8px rgba(79, 70, 229, 0.25);
+    transition: all 0.2s ease;
+}
+
+#send-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+#send-button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+#send-button:disabled {
+    background: linear-gradient(135deg, #9CA3AF 0%, #D1D5DB 100%);
+    box-shadow: none;
+}
+
+/* =========================
+   Related Questions
+   ========================= */
+
+.related-question {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.625rem 0.875rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--color-bg-hover);
+    border: 1px solid var(--color-border);
+    border-radius: 0.625rem;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.875rem;
+}
+
+.related-question:hover {
+    background-color: var(--color-bg-surface);
+    border-color: var(--color-border-focus);
+    color: var(--color-accent-primary);
+    transform: translateX(4px);
+}
+
+/* =========================
+   Welcome Screen
+   ========================= */
+
+.example-query-chat {
+    background-color: var(--color-bg-surface);
+    border: 1.5px solid var(--color-border);
+    transition: all 0.2s ease;
+}
+
+.example-query-chat:hover {
+    border-color: var(--color-border-focus);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.08);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   Scrollbars
+   ========================= */
+
+#messages-container::-webkit-scrollbar,
+#sources-list::-webkit-scrollbar {
+    width: 10px;
+}
+
+#messages-container::-webkit-scrollbar-track,
+#sources-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#messages-container::-webkit-scrollbar-thumb,
+#sources-list::-webkit-scrollbar-thumb {
+    background-color: var(--color-border-hover);
+    border-radius: 5px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+#messages-container::-webkit-scrollbar-thumb:hover,
+#sources-list::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-text-muted);
+}
+
+/* =========================
+   Animations
+   ========================= */
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.streaming-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background-color: var(--color-accent-primary);
+    margin-left: 2px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* =========================
+   Messages Container
+   ========================= */
+
+#messages-container {
+    scroll-behavior: smooth;
+    background-color: var(--color-bg-primary);
+}
+
+/* Welcome message area */
+#welcome-message {
+    color: var(--color-text-primary);
+}
+
+#welcome-message h2 {
+    color: var(--color-text-primary);
+}
+
+#welcome-message p {
+    color: var(--color-text-muted);
+}
+
+/* =========================
+   Prose Styling
+   ========================= */
+
+.ai-response-prose p {
+    margin-bottom: 1rem;
+}
+
+.ai-response-prose p:last-child {
+    margin-bottom: 0;
+}
+
+.ai-response-prose strong {
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.ai-response-prose ul,
+.ai-response-prose ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.ai-response-prose li {
+    margin-bottom: 0.5rem;
+}
+
+/* =========================
+   Buttons & Interactive Elements
+   ========================= */
+
+button:not(#send-button):not(.related-question):not(.example-query-chat) {
+    transition: all 0.2s ease;
+}
+
+button:not(#send-button):not(.related-question):not(.example-query-chat):hover {
+    opacity: 0.8;
+}
+
+/* Clear chat button */
+#clear-chat {
+    padding: 0.5rem 0.875rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+#clear-chat:hover {
+    background-color: var(--color-bg-active);
+}
+
+/* Toggle sources button */
+#toggle-sources {
+    padding: 0.5rem 0.875rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+#toggle-sources:hover {
+    background-color: var(--color-bg-active);
+}
+
+/* =========================
+   Mobile Responsive
+   ========================= */
+
+@media (max-width: 768px) {
+    #sources-panel {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 50;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        box-shadow: -4px 0 24px rgba(0, 0, 0, 0.1);
+    }
+
+    #sources-panel.show {
+        transform: translateX(0);
+    }
+
+    .message-user-content {
+        max-width: 85%;
+        font-size: 0.875rem;
+    }
+
+    .ai-response-prose {
+        font-size: 0.875rem;
+    }
+}
+
+/* =========================
+   Utility Classes
+   ========================= */
+
+.shadow-soft {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-soft-lg {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.dark .shadow-soft {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dark .shadow-soft-lg {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}

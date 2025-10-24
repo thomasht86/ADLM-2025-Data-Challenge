@@ -1,0 +1,13 @@
+[project]
+name = "adlm-2025-data-challenge"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "google-genai>=1.45.0",
+    "jupyter>=1.1.1",
+    "pymupdf>=1.26.5",
+    "pymupdf4llm>=0.0.27",
+    "tqdm>=4.67.1",
+]

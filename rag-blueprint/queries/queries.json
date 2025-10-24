@@ -1,0 +1,213 @@
+[
+  {
+    "query_id": "alex_q_01",
+    "query_text": "Find the Python script where I implemented the custom attention layer for the 'SynapseCore' module.",
+    "category": "Navigational - Code",
+    "description": "Locating a specific piece of code within his projects.",
+    "relevant_document_ids": [
+      "1",
+      "50",
+      "82"
+    ]
+  },
+  {
+    "query_id": "alex_q_02",
+    "query_text": "What were the key takeaways from the YC workshop on B2B sales?",
+    "category": "Factual Recall - Notes",
+    "description": "Recalling information from his notes on a specific event.",
+    "relevant_document_ids": [
+      "2",
+      "83"
+    ]
+  },
+  {
+    "query_id": "alex_q_03",
+    "query_text": "Show me my training log where I hit my 500 lb deadlift PR.",
+    "category": "Navigational - Personal",
+    "description": "Finding a specific personal achievement in his logs.",
+    "relevant_document_ids": [
+      "3",
+      "33",
+      "45",
+      "60"
+    ]
+  },
+  {
+    "query_id": "alex_q_04",
+    "query_text": "Pull up the architecture doc for SynapseFlow v0.2.",
+    "category": "Navigational - Technical Docs",
+    "description": "Finding a specific version of a technical document.",
+    "relevant_document_ids": [
+      "4",
+      "8",
+      "48",
+      "50",
+      "66"
+    ]
+  },
+  {
+    "query_id": "alex_q_05",
+    "query_text": "What was my average daily protein intake in January 2025?",
+    "category": "Factual Recall - Personal",
+    "description": "Extracting a specific data point from personal logs.",
+    "relevant_document_ids": [
+      "5"
+    ]
+  },
+  {
+    "query_id": "alex_q_06",
+    "query_text": "Summarize the user feedback from the beta API test in April.",
+    "category": "Summarization - Product",
+    "description": "Summarizing feedback from a specific user test period.",
+    "relevant_document_ids": [
+      "6",
+      "10",
+      "31",
+      "50"
+    ]
+  },
+  {
+    "query_id": "alex_q_07",
+    "query_text": "What were the main concerns from the investor meeting with VC Firm A?",
+    "category": "Factual Recall - Business",
+    "description": "Recalling key points from a specific business meeting.",
+    "relevant_document_ids": [
+      "7"
+    ]
+  },
+  {
+    "query_id": "alex_q_08",
+    "query_text": "Why did we decide to use Kubernetes for SynapseFlow?",
+    "category": "Factual Recall - Technical Docs",
+    "description": "Understanding the rationale behind a key technical decision.",
+    "relevant_document_ids": [
+      "8",
+      "4",
+      "17"
+    ]
+  },
+  {
+    "query_id": "alex_q_09",
+    "query_text": "Find my notes on RAG, including the foundational papers.",
+    "category": "Navigational - Research",
+    "description": "Locating research notes on a specific AI topic.",
+    "relevant_document_ids": [
+      "9",
+      "25",
+      "42"
+    ]
+  },
+  {
+    "query_id": "alex_q_10",
+    "query_text": "What are our main priorities for Q2 2025?",
+    "category": "Factual Recall - Business",
+    "description": "Recalling strategic company goals for a specific quarter.",
+    "relevant_document_ids": [
+      "10",
+      "31",
+      "41",
+      "43"
+    ]
+  },
+  {
+    "query_id": "alex_q_11",
+    "query_text": "Where's that journal entry where I compared YC to powerlifting?",
+    "category": "Navigational - Personal",
+    "description": "Finding a specific personal reflection in his journal.",
+    "relevant_document_ids": [
+      "11",
+      "58",
+      "100"
+    ]
+  },
+  {
+    "query_id": "alex_q_12",
+    "query_text": "What version of CUDA and TensorFlow did I use for the old 'VisionServe' project?",
+    "category": "Factual Recall - Code",
+    "description": "Recalling technical specifications from a past project.",
+    "relevant_document_ids": [
+      "12",
+      "94"
+    ]
+  },
+  {
+    "query_id": "alex_q_13",
+    "query_text": "Find my notes from the YC talk about pivoting.",
+    "category": "Navigational - Notes",
+    "description": "Finding notes from a specific lecture or talk.",
+    "relevant_document_ids": [
+      "13"
+    ]
+  },
+  {
+    "query_id": "alex_q_14",
+    "query_text": "Which MLOps tool did I choose for internal tracking back in 2024, and why?",
+    "category": "Factual Recall - Technical Docs",
+    "description": "Recalling the outcome and rationale of a past technical evaluation.",
+    "relevant_document_ids": [
+      "14"
+    ]
+  },
+  {
+    "query_id": "alex_q_15",
+    "query_text": "Where are my prep notes for the presentation on the data preprocessing pipeline?",
+    "category": "Navigational - Work Product",
+    "description": "Finding preparation materials for a specific presentation.",
+    "relevant_document_ids": [
+      "15",
+      "50"
+    ]
+  },
+  {
+    "query_id": "alex_q_16",
+    "query_text": "Remind me of the common pitfalls when fine-tuning LLMs.",
+    "category": "Factual Recall - Research",
+    "description": "Getting a summary of research notes on a technical topic.",
+    "relevant_document_ids": [
+      "16",
+      "68",
+      "86"
+    ]
+  },
+  {
+    "query_id": "alex_q_17",
+    "query_text": "What was the communication style feedback I got from that YC partner in March?",
+    "category": "Factual Recall - Personal",
+    "description": "Recalling specific feedback he received.",
+    "relevant_document_ids": [
+      "17",
+      "70"
+    ]
+  },
+  {
+    "query_id": "alex_q_18",
+    "query_text": "Show me my favorite 5/3/1 powerlifting routine.",
+    "category": "Navigational - Personal",
+    "description": "Finding a specific personal document.",
+    "relevant_document_ids": [
+      "18",
+      "27",
+      "45",
+      "60"
+    ]
+  },
+  {
+    "query_id": "alex_q_19",
+    "query_text": "Find my research notes on Python serialization alternatives to pickle.",
+    "category": "Navigational - Research",
+    "description": "Finding research notes on a technical topic.",
+    "relevant_document_ids": [
+      "19"
+    ]
+  },
+  {
+    "query_id": "alex_q_20",
+    "query_text": "Pull up the blog post idea for demystifying MLOps.",
+    "category": "Navigational - Work Product",
+    "description": "Finding a draft or outline for a piece of content.",
+    "relevant_document_ids": [
+      "20",
+      "35"
+    ]
+  }
+]
