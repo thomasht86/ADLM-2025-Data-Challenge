@@ -7,39 +7,81 @@ schema doc {
             indexing: summary | attribute
         }
 
-        field title type string {
-            indexing: index | summary
-            index: enable-bm25
-        }
-
         field text type string {
             
         }
 
-        field created_timestamp type long {
-            indexing: attribute | summary
+        # Common fields for both FDA and SOP documents
+        field analyte_biomarker type string {
+            indexing: index | summary | attribute
+            index: enable-bm25
         }
-        field modified_timestamp type long {
-            indexing: attribute | summary
+
+        field medical_specialty type string {
+            indexing: index | summary | attribute
+            index: enable-bm25
         }
-        
-        field last_opened_timestamp type long {
-            indexing: attribute | summary
+
+        # FDA-specific fields
+        field device_trade_name type string {
+            indexing: index | summary | attribute
+            index: enable-bm25
         }
-        field open_count type int {
-            indexing: attribute | summary
+
+        field product_code type string {
+            indexing: summary | attribute
         }
-        field favorite type bool {
+
+        field intended_use type string {
+            indexing: index | summary
+            index: enable-bm25
+        }
+
+        field manufacturer_name type string {
+            indexing: index | summary | attribute
+            index: enable-bm25
+        }
+
+        field fda_decision_date type long {
             indexing: attribute | summary
         }
 
-    }
-
-    field title_embedding type tensor<int8>(x[96]) {
-        indexing: input title | embed | pack_bits | attribute | index
-        attribute {
-            distance-metric: hamming
+        # SOP-specific fields
+        field procedure_name type string {
+            indexing: index | summary | attribute
+            index: enable-bm25
         }
+
+        field specimen_type type string {
+            indexing: index | summary | attribute
+            index: enable-bm25
+        }
+
+        field purpose type string {
+            indexing: index | summary
+            index: enable-bm25
+        }
+
+        field equipment type array<string> {
+            indexing: index | summary
+            index: enable-bm25
+        }
+
+        field reagents type array<string> {
+            indexing: index | summary
+            index: enable-bm25
+        }
+
+        field quality_control type string {
+            indexing: index | summary
+            index: enable-bm25
+        }
+
+        field interpretation_guidelines type string {
+            indexing: index | summary
+            index: enable-bm25
+        }
+
     }
 
     field chunks type array<string> {
@@ -55,18 +97,7 @@ schema doc {
     }
 
     fieldset default {
-        fields: title, chunks
-    }
-
-    document-summary no-chunks {
-        summary id {}
-        summary title {}
-        summary created_timestamp {}
-        summary modified_timestamp {}
-        summary last_opened_timestamp {}
-        summary open_count {}
-        summary favorite {}
-        summary chunks {}
+        fields: chunks
     }
 
     document-summary top_3_chunks {

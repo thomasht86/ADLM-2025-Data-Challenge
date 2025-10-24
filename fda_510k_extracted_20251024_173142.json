@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "document_type": "fda",
+    "total_files": 5,
+    "extraction_date": "2025-10-24T17:31:42.609971",
+    "batch_size": 100,
+    "successful": 5,
+    "errors": 0,
+    "last_updated": "2025-10-24T17:31:45.004611"
+  },
+  "results": [
+    {
+      "file": "K050182.md",
+      "data": {
+        "device_trade_name": "Q.STEPS Biometer G/C Dual Monitoring System",
+        "product_code": "CGA, CHH",
+        "intended_use": "The Q.STEPS Biometer G/C Dual Monitoring System is intended for use with Q.STEPS Glucose and Cholesterol Test Strips with Q.STEPS Biometer G/C by healthcare professionals and home users. Q.STEPS Biometer G/C System provides a quantitative measurement of Glucose and Cholesterol in whole blood from the fingertips. The Glucose measurements are used in helping the management of carbohydrate metabolism disorders including diabetes mellitus, idiopathic hypoglycemia and pancreatic islet cell tumors. Cholesterol measurements are used in the management of disorders involving excess cholesterol in the blood, lipid and lipoprotein metabolism disorders.",
+        "analyte_biomarker": "Glucose, Cholesterol",
+        "medical_specialty": "Clinical Chemistry",
+        "manufacturer_name": "Biomedix,lnc.",
+        "fda_decision_date": "08-09-2005"
+      }
+    },
+    {
+      "file": "K050100.md",
+      "data": {
+        "device_trade_name": "RNAlc Hemoglobin Alc Control for Bayer DCA2000 and DCA2000+ Analyzers",
+        "product_code": "JJX",
+        "intended_use": "RNAlc Control for Bayer DCA2000 and DCA2000+ Analyzers is intended to be used to monitor and evaluate the analytical performance of the Bayer DCA 2000 and DCA 2000+ Analyzers that measure HbAlc. The use of quality control materials is indicated as an objective assessment of the precision of methods and techniques in use and is an integral part of good laboratory practice. The two levels of controls allow performance monitoring within the clinically important range.",
+        "analyte_biomarker": "Hemoglobin Alc",
+        "medical_specialty": "Chemistry",
+        "manufacturer_name": "Bionostics, Inc.",
+        "fda_decision_date": "02-25-2005"
+      }
+    },
+    {
+      "file": "K050191.md",
+      "data": {
+        "device_trade_name": "BD FACSCanto system with BD FACSCanto clinical software",
+        "product_code": "GKZ",
+        "intended_use": "The BD FACSCanto system with BD FACSCanto clinical software when used with the BD FACS Sample Prep Assistant II is intended for use as an in vitro diagnostic device for identification and enumeration of lymphocyte subsets in human cells in suspension using a lyse / no-wash sample preparation method for flow cytometry. This is the same intended use as previously cleared for the BD FACSCanto system with BD FACSCanto clinical software. Immunophenotyping in clinical laboratories, using previously cleared IVD assays for flow cytometry that utilize the lyse no-wash sample preparation method. Immunophenotyping of lymphocyte subsets including CD3+CD8 +, CD3CD4 [4], CD3-CD 16 [+] and/or CD56 +, CD3YCD19 +, and CD3 +. For in vitro diagnostic use. For use with or without the BD FACS Sample Prep Assistant II.",
+        "analyte_biomarker": "lymphocyte subsets",
+        "medical_specialty": "Immunology, Hematology",
+        "manufacturer_name": "BD Bioisciences",
+        "fda_decision_date": "02-22-2005"
+      }
+    },
+    {
+      "file": "K050026.md",
+      "data": {
+        "device_trade_name": "Roche Diagnostics C.f.a.s. (Calibrator for automated systems) PUC (Proteins in Urine/CSF) / Roche Diagnostics Precinorm \u00ae PUC (Proteins in Urine/CSF) and Precipath \u00ae PUC (Proteins in Urine/CSF)",
+        "product_code": "JIX, JJY",
+        "intended_use": "C.f.a.s. PUC is for use in the calibration of quantitative Roche methods on Roche clinical chemistry analyzers as specified in the enclosed value sheet. Precinorm \u00ae PUC/ Precipath \u00ae PUC is for use in quality control by monitoring accuracy and precision for the quantitative methods as specified in the enclosed value sheet",
+        "analyte_biomarker": "Albumin, Total protein, Immunoglobulin G, Creatinine, Immunoglobulin A, Immunoglobulin M",
+        "medical_specialty": "Clinical Chemistry",
+        "manufacturer_name": "Roche Diagnostics",
+        "fda_decision_date": "01-31-2005"
+      }
+    },
+    {
+      "file": "K221640.md",
+      "data": {
+        "device_trade_name": "AlloMap Heart Molecular Expression Testing",
+        "product_code": "OJQ",
+        "intended_use": "AlloMap Heart Molecular Expression Testing is an In Vitro Diagnostic Multivariate Index assay (IVDMIA) test service, performed in a single laboratory, assessing the gene expression profile of RNA isolated from peripheral blood mononuclear cells (PBMC). AlloMap Heart Testing is intended to aid in the identification of heart transplant recipients with stable allograft function who have a low probability of moderate/severe acute cellular rejection (ACR) at the time of testing in conjunction with standard clinical assessment. Indicated for use in heart transplant recipients: 15 years of age or older, At least 2 months (>=55 days) post-transplant",
+        "analyte_biomarker": "RNA",
+        "medical_specialty": "Clinical Chemistry",
+        "manufacturer_name": "CareDx, Inc.",
+        "fda_decision_date": "04-07-2023"
+      }
+    }
+  ],
+  "errors": []
+}

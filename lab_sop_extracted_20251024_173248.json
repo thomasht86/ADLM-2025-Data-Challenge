@@ -1,0 +1,134 @@
+{
+  "metadata": {
+    "document_type": "sop",
+    "total_files": 5,
+    "extraction_date": "2025-10-24T17:32:48.838366",
+    "batch_size": 100,
+    "successful": 5,
+    "errors": 0,
+    "last_updated": "2025-10-24T17:32:51.264292"
+  },
+  "results": [
+    {
+      "file": "11-DESOXYCORTISOL.md",
+      "data": {
+        "procedure_name": "11-Deoxycortisol",
+        "specimen_type": "Serum or plasma",
+        "analyte_biomarker": "11-Deoxycortisol",
+        "medical_specialty": null,
+        "purpose": "To outline the steps involved in the analytical phase of generating results for 11-Deoxycortisol in a CLIA-certified laboratory, ensuring accuracy, consistency, and reliability of results for clinical use.",
+        "equipment": [
+          "Centrifuge",
+          "Refrigerated centrifuge",
+          "Pipettes and disposables",
+          "Liquid chromatography-mass spectrometry (LC-MS/MS) system"
+        ],
+        "reagents": [
+          "11-Deoxycortisol calibration standards and quality controls",
+          "Mobile phase solvents (e.g., acetonitrile, water, methanol)",
+          "Internal standard (e.g., deuterated 11-Deoxycortisol)",
+          "Extraction solvents (e.g., ethyl acetate, hexane)"
+        ],
+        "quality_control": "Perform analysis of three levels of quality control with each batch. Acceptable limits for quality control are set based on the manufacturer\u2019s recommendations and verified by the laboratory. If quality control fails, repeat analysis or troubleshoot the LC-MS/MS system.",
+        "interpretation_guidelines": "Results are automatically transmitted to the Laboratory Information System (LIS) and reviewed by the technologist. Verify results before releasing to ensure values are consistent with quality control and patient conditions. Report any critical values following the laboratory's critical values protocol."
+      }
+    },
+    {
+      "file": "11-DEOXYCORTICOSTERONE_SERUM.md",
+      "data": {
+        "procedure_name": "11-Deoxycorticosterone, Serum Testing",
+        "specimen_type": "Serum",
+        "analyte_biomarker": "11-Deoxycorticosterone",
+        "medical_specialty": null,
+        "purpose": "To provide a detailed and standardized protocol for the analysis and reporting of 11-deoxycorticosterone levels in serum samples. Ensure consistency, accuracy, and reliability of test results.",
+        "equipment": [
+          "High-Performance Liquid Chromatography (HPLC)",
+          "Liquid Chromatography-Mass Spectrometry (LC-MS/MS)"
+        ],
+        "reagents": [
+          "11-Deoxycorticosterone standards for calibration",
+          "Internal standards",
+          "Specific reagents and solvents as per manufacturer's protocol for sample preparation"
+        ],
+        "quality_control": "Run quality control samples (low, medium, and high concentrations) along with patient samples to ensure assay performance. Document any quality control failures and repeat the analysis if necessary. Routine maintenance and calibration of the HPLC or LC-MS/MS should be performed to ensure optimal operation.",
+        "interpretation_guidelines": "Reference intervals for 11-Deoxycorticosterone should be based on validated literature or established laboratory data. Potential interferences from other steroids should be considered."
+      }
+    },
+    {
+      "file": "11-NOR-DELTA-9-TETRAHYDROCANNABINOL-9-CARBOXYLIC_ACID_CARBOXY-THC_CONFIRMATION_MECONIUM.md",
+      "data": {
+        "procedure_name": "Analytical Phase for 11-NOR-DELTA-9-TETRAHYDROCANNABINOL-9-CARBOXYLIC ACID (CARBOXY-THC) CONFIRMATION IN MECONIUM",
+        "specimen_type": "Meconium",
+        "analyte_biomarker": "Carboxy-THC (11-NOR-DELTA-9-TETRAHYDROCANNABINOL-9-CARBOXYLIC ACID)",
+        "medical_specialty": null,
+        "purpose": "To provide a detailed protocol for the confirmation of Carboxy-THC in meconium samples, including the analytical steps required to generate reliable and accurate results following sample preparation and extraction.",
+        "equipment": [
+          "Gas Chromatography-Mass Spectrometry (GC-MS)",
+          "Liquid Chromatography-Mass Spectrometry (LC-MS/MS)",
+          "Analytical balance",
+          "Centrifuge",
+          "Vortex mixer",
+          "Pipettes and tips"
+        ],
+        "reagents": [
+          "Carboxy-THC standard",
+          "Internal standard solution",
+          "Organic solvents (Methanol, Acetonitrile)",
+          "Buffer solutions",
+          "HPLC grade water",
+          "Extraction media (e.g., solid phase extraction cartridges)"
+        ],
+        "quality_control": "Use two levels of internal quality control for each batch of samples. In case of QC failure, halt analysis and investigate the cause. Retest samples once the issue is resolved. Document all QC measures and corrective actions taken.",
+        "interpretation_guidelines": "Refer to established cutoff levels for Carboxy-THC positivity as per laboratory guidelines."
+      }
+    },
+    {
+      "file": "11-NOR-DELTA-9-TETRAHYDROCANNABINOL-9-CARBOXYLIC_ACID_CARBOXY-THC_CONFIRMATION_CHAIN_OF_CUSTODY_MECONIUM.md",
+      "data": {
+        "procedure_name": "Confirmation of 11-NOR-DELTA-9-TETRAHYDROCANNABINOL-9-CARBOXYLIC ACID (Carboxy-THC) in Meconium",
+        "specimen_type": "Meconium",
+        "analyte_biomarker": "11-NOR-DELTA-9-TETRAHYDROCANNABINOL-9-CARBOXYLIC ACID (Carboxy-THC)",
+        "medical_specialty": "Forensic Toxicology",
+        "purpose": "To confirm the presence of 11-NOR-DELTA-9-TETRAHYDROCANNABINOL-9-CARBOXYLIC ACID (Carboxy-THC) in meconium for forensic purposes, ensuring a proper chain of custody, reliable and accurate results, consistent documentation, and clear accountability for specimen handling and analysis.",
+        "equipment": [
+          "Gas Chromatography-Mass Spectrometry (GC-MS)",
+          "Liquid Chromatography-Mass Spectrometry (LC-MS/MS)",
+          "Mechanical homogenizer"
+        ],
+        "reagents": [
+          "Extraction solvents (e.g., methanol, acetonitrile)",
+          "Solid phase extraction cartridges",
+          "Certified reference standards for Carboxy-THC",
+          "Calibration solutions",
+          "Internal standards"
+        ],
+        "quality_control": "Run quality control samples, including a blank, a negative control, and a positive control. Ensure all instrument calibrations fall within manufacturer\u2019s specified ranges. Verify that quality control samples meet reference criteria. Troubleshoot any deviations and reanalyze samples if necessary.",
+        "interpretation_guidelines": "Confirm the presence or absence of Carboxy-THC. Document results: include specimen identifier, quantitative values, and analyst\u2019s initials. Transmit verified results to Laboratory Information System (LIS)/electronic health record (EHR)."
+      }
+    },
+    {
+      "file": "11-DEOXYCORTISOL_SERUM.md",
+      "data": {
+        "procedure_name": "11Deoxycortisol, Serum Analytical Phase",
+        "specimen_type": "Serum",
+        "analyte_biomarker": "11-Deoxycortisol",
+        "medical_specialty": null,
+        "purpose": "To outline the procedure for the analytical phase of generating results for 11-Deoxycortisol in serum samples, ensuring accurate and reliable test results that comply with clinical laboratory standards.",
+        "equipment": [
+          "Spectrophotometer",
+          "Analytical instrument",
+          "Pipettes",
+          "Centrifuge"
+        ],
+        "reagents": [
+          "Reagents for 11-Deoxycortisol assay",
+          "Calibrators and controls specific to 11-Deoxycortisol measurement",
+          "Assay kit instructions"
+        ],
+        "quality_control": "Internal Quality Control: Run three levels of control (low, medium, high) with each batch of samples to ensure the assay's accuracy and precision. Document all control results. If controls fail, do not report patient results until the issue is resolved. External Quality Control: Participate in relevant proficiency testing programs and document the results as required. Calibration and Validation: Perform calibration verification annually or after major instrument maintenance. Validate new reagent lots by comparing results with previous lots using patient samples.",
+        "interpretation_guidelines": "Results are automatically transmitted to the LIS and must be reviewed and verified by the technologist. Reference Intervals: Refer to site-specific reference intervals for 11Deoxycortisol. Critical Results: Follow site-specific guidelines for reporting critical values. Document any actions taken in response to critical results."
+      }
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,10 @@
+{
+  "vespaSchemaLS.javaHome": "/usr/lib/jvm/java-25-openjdk",
+  "files.associations": {
+    "*.sd": "vespaSchema",
+    "*.profile": "vespaSchema"
+  },
+  "[vespaSchema]": {
+    "editor.formatOnSave": true
+  }
+}
